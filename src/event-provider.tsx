@@ -1,9 +1,10 @@
 import React from 'react';
+import type { ViewProps } from 'react-native';
 import useEventStore from './use-event-store';
 import EventContext from './event-context';
 import Container from './container';
 
-export default function EventProvider(props) {
+export default function EventProvider(props: ViewProps) {
   const eventStore = useEventStore();
 
   return (

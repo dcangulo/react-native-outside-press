@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import EventContext from './event-context';
+import type { EventContextType } from './interfaces';
 
 export default function useEvent() {
-  const eventContext = useContext(EventContext);
+  const eventContext = useContext(EventContext) as EventContextType;
 
   return eventContext;
 }
