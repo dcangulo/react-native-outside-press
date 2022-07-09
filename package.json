@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "typescript": "tsc --noEmit",
-    "prepare": "bob build"
+    "prepare": "husky install; bob build"
   },
   "keywords": [
     "react-native"
@@ -33,8 +33,11 @@
   },
   "homepage": "https://github.com/dcangulo/react-native-outside-press",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.68.0",
+    "husky": "^8.0.1",
     "react-native-builder-bob": "^0.18.3",
     "typescript": "^4.5.2"
   },
