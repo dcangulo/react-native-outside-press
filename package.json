@@ -63,5 +63,8 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "eslint-config-airbnb-typescript": "^17.0.0"
   }
 }

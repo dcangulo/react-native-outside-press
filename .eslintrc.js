@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,6 +16,7 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.eslint.json',
   },
   plugins: [
     'react',
@@ -33,20 +35,5 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/prop-types': 0,
     'react/destructuring-assignment': 0,
-    'react/jsx-filename-extension': [1,
-      {
-        extensions: [
-          '.tsx',
-        ],
-      },
-    ],
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'no-undef': 'off',
-      },
-    },
-  ],
 };
