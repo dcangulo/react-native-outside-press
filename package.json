@@ -12,8 +12,9 @@
     "lib"
   ],
   "scripts": {
-    "typescript": "tsc --noEmit",
-    "prepare": "husky install; bob build"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepare": "husky install; bob build",
+    "typescript": "tsc --noEmit"
   },
   "keywords": [
     "react-native"
@@ -36,7 +37,16 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@types/react": "~17.0.21",
-    "@types/react-native": "0.68.0",
+    "@types/react-native": "^0.69.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "husky": "^8.0.1",
     "react-native-builder-bob": "^0.18.3",
     "typescript": "^4.5.2"
@@ -53,5 +63,8 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "eslint-config-airbnb-typescript": "^17.0.0"
   }
 }

@@ -1,9 +1,15 @@
 import React, { useRef, useEffect } from 'react';
 import { Pressable } from 'react-native';
-import useEvent from './use-event';
-import deepClone from './deep-clone';
+import useEvent from '../hooks/use-event';
+import deepClone from '../utils/deep-clone';
 
-export default function OutsidePressHandler({ children, onOutsidePress }) {
+interface IOutsidePressHandlerProps {
+  children: JSX.Element;
+  onOutsidePress: () => void;
+}
+
+export default function OutsidePressHandler(props: IOutsidePressHandlerProps) {
+  const { children, onOutsidePress } = props;
   const id = useRef(Math.random().toString()).current;
   const { appendEvent, removeEvent, setSkippedEventId } = useEvent();
   const setSkippedEventIdFunc = () => setSkippedEventId(id);
