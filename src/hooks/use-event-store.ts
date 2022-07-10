@@ -1,5 +1,9 @@
 import { useState, useMemo } from 'react';
-import type { IEvent } from './interfaces';
+
+export interface IEvent {
+  id: string;
+  onOutsidePress: () => void;
+}
 
 export default function useEventStore() {
   const [events, setEvents] = useState<IEvent[]>([]);

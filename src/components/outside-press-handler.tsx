@@ -1,8 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import { Pressable } from 'react-native';
-import useEvent from './use-event';
-import deepClone from './deep-clone';
-import type { IOutsidePressHandlerProps } from './interfaces';
+import useEvent from '../hooks/use-event';
+import deepClone from '../utils/deep-clone';
+
+interface IOutsidePressHandlerProps {
+  children: JSX.Element;
+  onOutsidePress: () => void;
+}
 
 export default function OutsidePressHandler(props: IOutsidePressHandlerProps) {
   const { children, onOutsidePress } = props;

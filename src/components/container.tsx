@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Platform, View } from 'react-native';
 import type { ViewProps } from 'react-native';
-import useEvent from './use-event';
-import type { IEvent } from './interfaces';
+import useEvent from '../hooks/use-event';
+import type { IEvent } from '../hooks/use-event-store';
 
 export default function Container(props: ViewProps) {
   const { events, skippedEventId, setSkippedEventId } = useEvent();
