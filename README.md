@@ -9,7 +9,6 @@
 | iOS                | Android            | Web                | Windows            | macOS              | Expo               |
 |--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 ```bash
