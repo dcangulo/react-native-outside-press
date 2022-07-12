@@ -1,5 +1,8 @@
 # Changelogs
 
+## 1.0.2 (2022-07-12)
+* Fixed unexpected behavior on iOS and Android.
+
 ## 1.0.1 (2022-07-11)
 * Fixed a bug where a dev dependency is in dependencies.
 

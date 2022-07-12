@@ -28,7 +28,7 @@ export default function App() {
   );
 }
 ```
-`EventProvider` accepts `ViewProps`. See: https://reactnative.dev/docs/view#props
+`EventProvider` accepts `ViewProps`. See: [ViewProps](https://reactnative.dev/docs/view#props)
 
 Then wrap every component you want to detect outside press.
 ```js
@@ -47,6 +47,7 @@ export default function MyComponent() {
   );
 }
 ```
+`OutsidePressHandler` accepts `onOutsidePress` prop and `ViewProps`. See: [ViewProps](https://reactnative.dev/docs/view#props)
 
 ## Changelogs
 See [CHANGELOGS.md](CHANGELOGS.md)
