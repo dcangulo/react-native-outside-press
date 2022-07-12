@@ -13,7 +13,10 @@ export default function useEventStore() {
     appendEvent: (newEvent: IEvent) => setEvents((state) => [...state, newEvent]),
     removeEvent: (id: string) => setEvents((state) => state.filter((event) => event.id !== id)),
     skippedEventId,
-    setSkippedEventId,
+    setSkippedEventId: (id: string) => {
+      (global as any).rnopSkippedEventId = id;
+      setSkippedEventId(id);
+    },
   }), [skippedEventId, events]);
 
   return eventActions;

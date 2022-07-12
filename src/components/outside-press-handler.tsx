@@ -1,16 +1,16 @@
 import React, { useRef, useEffect } from 'react';
-import { Pressable } from 'react-native';
+import { View, Platform } from 'react-native';
+import type { ViewProps } from 'react-native';
 import useEvent from '../hooks/use-event';
 import deepClone from '../utils/deep-clone';
 
-interface IOutsidePressHandlerProps {
-  children: JSX.Element;
+interface IOutsidePressHandlerProps extends ViewProps {
   onOutsidePress: () => void;
 }
 
 export default function OutsidePressHandler(props: IOutsidePressHandlerProps) {
   const { children, onOutsidePress } = props;
-  const id = useRef(Math.random().toString()).current;
+  const id: string = useRef(Math.random().toString()).current;
   const { appendEvent, removeEvent, setSkippedEventId } = useEvent();
   const setSkippedEventIdFunc = () => setSkippedEventId(id);
 
@@ -20,9 +20,21 @@ export default function OutsidePressHandler(props: IOutsidePressHandlerProps) {
     return () => removeEvent(id);
   }, [onOutsidePress]);
 
-  return (
-    <Pressable onPress={setSkippedEventIdFunc}>
-      {deepClone(children, setSkippedEventIdFunc)}
-    </Pressable>
-  );
+  return Platform.select({
+    web: (
+      <View
+        {...props}
+        /*
+        // @ts-ignore */
+        onClick={setSkippedEventIdFunc}
+      >
+        {deepClone(children, setSkippedEventIdFunc)}
+      </View>
+    ),
+    default: (
+      <View {...props} onTouchStart={setSkippedEventIdFunc}>
+        {children}
+      </View>
+    ),
+  });
 }

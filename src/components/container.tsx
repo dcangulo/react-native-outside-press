@@ -8,11 +8,11 @@ export default function Container(props: ViewProps) {
   const { events, skippedEventId, setSkippedEventId } = useEvent();
   const runEvents = () => {
     events.forEach((event: IEvent) => {
-      if (event.id === skippedEventId) return;
+      if (event.id === (global as any).rnopSkippedEventId) return;
       event.onOutsidePress();
     });
 
-    if (skippedEventId) setSkippedEventId('');
+    if ((global as any).rnopSkippedEventId) setSkippedEventId('');
   };
 
   useEffect(() => {
