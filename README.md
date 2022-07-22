@@ -22,9 +22,9 @@ import { EventProvider } from 'react-native-outside-press';
 
 export default function App() {
   return (
-    <EventProvider>
+    <EventProvider style={{ flex: 1 }}>
       <RestOfYourApp />
-    <EventProvider/>
+    </EventProvider>
   );
 }
 ```
