@@ -9,6 +9,8 @@ export default function Container(props: ViewProps) {
   const runEvents = () => {
     events.forEach((event: IEvent) => {
       if (event.id === (global as any).rnopSkippedEventId) return;
+      if (event.disabled) return;
+
       event.onOutsidePress();
     });
 

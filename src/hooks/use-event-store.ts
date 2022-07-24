@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react';
 export interface IEvent {
   id: string;
   onOutsidePress: () => void;
+  disabled: boolean;
 }
 
 export default function useEventStore() {
