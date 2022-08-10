@@ -1,6 +1,6 @@
 # Changelogs
 
-## Unreleased
+## 1.1.0 (2022-08-10)
 * Add `disabled` prop to `OutsidePressHandler`.
 
 ## 1.0.2 (2022-07-12)
