@@ -6,9 +6,9 @@
 [airbnb/react-outside-click-handler](https://github.com/airbnb/react-outside-click-handler) but for React Native.
 
 ## Compatibility
-| iOS                | Android            | Web                | Windows            | macOS              | Expo               |
-|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| iOS                | Android            | Web                | Windows | macOS | Expo               |
+|--------------------|--------------------|--------------------|---------|-------|--------------------|
+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x:     | :x:   | :white_check_mark: |
 
 ## Installation
 ```bash
@@ -28,7 +28,10 @@ export default function App() {
   );
 }
 ```
-`EventProvider` accepts [`ViewProps`](https://reactnative.dev/docs/view#props).
+### `EventProvider` Props
+| **Name** | **Type** | **Default**                             |
+|----------|----------|-----------------------------------------|
+| All of [`ViewProps`](https://reactnative.dev/docs/view#props) |
 
 Then wrap every component you want to detect outside press.
 ```js
@@ -47,7 +50,12 @@ export default function MyComponent() {
   );
 }
 ```
-`OutsidePressHandler` accepts `onOutsidePress` prop and [`ViewProps`](https://reactnative.dev/docs/view#props).
+### `OutsidePressHandler` Props
+| **Name**         | **Type** | **Default**                     |
+|------------------|----------|---------------------------------|
+| `onOutsidePress` | function | `undefined`                     |
+| `disabled`       | boolean  | `undefined`                     |
+| All of [`ViewProps`](https://reactnative.dev/docs/view#props) |
 
 ## Changelogs
 See [CHANGELOGS.md](CHANGELOGS.md)
