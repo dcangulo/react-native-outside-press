@@ -37,7 +37,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@types/react": "~18.0.15",
-    "@types/react-native": "^0.69.2",
+    "@types/react-native": "^0.70.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "eslint": "^7.32.0 || ^8.2.0",
