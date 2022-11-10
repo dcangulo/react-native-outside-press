@@ -6,9 +6,9 @@
 [airbnb/react-outside-click-handler](https://github.com/airbnb/react-outside-click-handler) but for React Native.
 
 ## Compatibility
-| iOS                | Android            | Web                | Windows | macOS | Expo               |
-|--------------------|--------------------|--------------------|---------|-------|--------------------|
-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x:     | :x:   | :white_check_mark: |
+| iOS                | Android            | Web                | Windows            | macOS              | Expo               |
+|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 ```bash
