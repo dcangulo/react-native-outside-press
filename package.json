@@ -49,7 +49,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-native": "^4.0.0",
     "husky": "^8.0.1",
-    "react-native-builder-bob": "^0.20.0",
+    "react-native-builder-bob": "^0.21.2",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
