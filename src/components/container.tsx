@@ -3,6 +3,7 @@ import { Platform, View } from 'react-native';
 import type { ViewProps } from 'react-native';
 import useEvent from '../hooks/use-event';
 import type { IEvent } from '../hooks/use-event-store';
+import deepClone from '../utils/deep-clone';
 
 export default function Container(props: ViewProps) {
   const { events, skippedEventId, setSkippedEventId } = useEvent();
@@ -29,7 +30,7 @@ export default function Container(props: ViewProps) {
         // @ts-ignore */
         onClick={runEvents}
       >
-        {props.children}
+        {deepClone(props.children, runEvents)}
       </View>
     ),
     default: (
