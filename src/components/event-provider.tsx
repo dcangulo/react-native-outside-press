@@ -9,9 +9,7 @@ export default function EventProvider(props: ViewProps) {
 
   return (
     <EventContext.Provider value={eventStore}>
-      <Container {...props}>
-        {props.children}
-      </Container>
+      <Container {...props}>{props.children}</Container>
     </EventContext.Provider>
   );
 }

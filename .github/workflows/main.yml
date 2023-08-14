@@ -12,6 +12,6 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Check types
-        run: yarn typescript
+        run: yarn typecheck
       - name: Run lint
         run: yarn lint

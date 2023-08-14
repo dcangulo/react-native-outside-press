@@ -9,52 +9,105 @@
   "source": "src/index",
   "files": [
     "src",
-    "lib"
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "!lib/typescript/example",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
   ],
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky install; bob build",
-    "typescript": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "prepack": "bob build",
+    "example": "yarn --cwd example",
+    "bootstrap": "yarn example && yarn install"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ios",
+    "android"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dcangulo/react-native-outside-press.git"
-  },
-  "author": {
-    "name": "David Angulo",
-    "email": "hello@davidangulo.xyz",
-    "url": "https://www.davidangulo.xyz"
-  },
+  "repository": "https://github.com/dcangulo/react-native-outside-press",
+  "author": "David Angulo <hello@davidangulo.xyz> (https://www.davidangulo.xyz)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dcangulo/react-native-outside-press/issues"
   },
-  "homepage": "https://github.com/dcangulo/react-native-outside-press",
+  "homepage": "https://github.com/dcangulo/react-native-outside-press#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@types/react": "~18.2.5",
-    "@types/react-native": "^0.72.2",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-react-native": "^4.0.0",
-    "husky": "^8.0.1",
-    "react-native-builder-bob": "^0.21.3",
-    "typescript": "^5.0.4"
+    "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.4.8",
+    "@react-native-community/eslint-config": "^3.0.2",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "0.70.0",
+    "commitlint": "^17.0.2",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "pod-install": "^0.1.0",
+    "prettier": "^2.0.5",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-builder-bob": "^0.20.0",
+    "typescript": "^5.0.2"
+  },
+  "resolutions": {
+    "@types/react": "17.0.21"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ],
+      "react-hooks/exhaustive-deps": 0
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
   },
   "react-native-builder-bob": {
     "source": "src",
@@ -62,7 +115,12 @@
     "targets": [
       "commonjs",
       "module",
-      "typescript"
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
     ]
   }
 }
