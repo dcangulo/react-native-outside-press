@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import OutsidePressHandler, { EventProvider } from 'react-native-outside-press';
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
       >
         <View style={styles.blackBox} />
       </OutsidePressHandler>
+      <Text onPress={() => console.log('Pressed!')}>Press Me</Text>
       <OutsidePressHandler
         disabled={false}
         onOutsidePress={() => {
