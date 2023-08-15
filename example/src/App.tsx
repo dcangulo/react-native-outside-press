@@ -6,7 +6,6 @@ export default function App() {
   return (
     <EventProvider style={styles.container}>
       <OutsidePressHandler
-        disabled={false}
         onOutsidePress={() => {
           console.log('Pressed outside the black box!');
         }}
@@ -15,7 +14,6 @@ export default function App() {
       </OutsidePressHandler>
       <Text onPress={() => console.log('Pressed!')}>Press Me</Text>
       <OutsidePressHandler
-        disabled={false}
         onOutsidePress={() => {
           console.log('Pressed outside the red box!');
         }}
