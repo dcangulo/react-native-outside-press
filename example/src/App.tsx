@@ -6,16 +6,21 @@ export default function App() {
   return (
     <EventProvider style={styles.container}>
       <OutsidePressHandler
-        disabled={false}
         onOutsidePress={() => {
           console.log('Pressed outside the black box!');
         }}
       >
-        <View style={styles.blackBox} />
+        <View style={styles.blackBox}>
+          <Text
+            style={styles.text}
+            onPress={() => console.log('Pressed inside blackbox!')}
+          >
+            Press Me
+          </Text>
+        </View>
       </OutsidePressHandler>
       <Text onPress={() => console.log('Pressed!')}>Press Me</Text>
       <OutsidePressHandler
-        disabled={false}
         onOutsidePress={() => {
           console.log('Pressed outside the red box!');
         }}
@@ -37,5 +42,8 @@ const styles = StyleSheet.create({
   redBox: {
     height: 200,
     backgroundColor: 'red',
+  },
+  text: {
+    color: 'white',
   },
 });

@@ -6,11 +6,11 @@ import deepClone from '../utils/deep-clone';
 
 interface IOutsidePressHandlerProps extends ViewProps {
   onOutsidePress: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export default function OutsidePressHandler(props: IOutsidePressHandlerProps) {
-  const { children, onOutsidePress, disabled } = props;
+  const { children, onOutsidePress, disabled = false } = props;
   const id: string = useRef(Math.random().toString()).current;
   const { appendEvent, removeEvent, setSkippedEventId } = useEvent();
   const setSkippedEventIdFunc = () => setSkippedEventId(id);

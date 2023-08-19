@@ -16,24 +16,32 @@ yarn add react-native-outside-press
 ```
 
 ## Usage
+
+### EventProvider
 Wrap your app with `EventProvider`.
+
 ```js
 import { EventProvider } from 'react-native-outside-press';
 
 export default function App() {
   return (
-    <EventProvider style={{ flex: 1 }}>
+    <EventProvider>
       <RestOfYourApp />
     </EventProvider>
   );
 }
 ```
-### `EventProvider` Props
-| **Name** | **Type** | **Default**                             |
-|----------|----------|-----------------------------------------|
-| All of [`ViewProps`](https://reactnative.dev/docs/view#props) |
 
-Then wrap every component you want to detect outside press.
+#### Props
+
+| Name        | Description         | Type                                                       | Default       | Required? |
+|-------------|---------------------|------------------------------------------------------------|---------------|-----------|
+| `style`     |                     | [ViewStyle](https://reactnative.dev/docs/view-style-props) | `{ flex: 1 }` | `false`   |
+| `ViewProps` | Inherits ViewProps. | [ViewProps](https://reactnative.dev/docs/view#props)       |               | `false`   |
+
+### OutsidePressHandler
+Wrap every component you want to detect outside press with `OutsidePressHandler`.
+
 ```js
 import { View } from 'react-native';
 import OutsidePressHandler from 'react-native-outside-press';
@@ -50,15 +58,17 @@ export default function MyComponent() {
   );
 }
 ```
-### `OutsidePressHandler` Props
-| **Name**         | **Type** | **Default**                     |
-|------------------|----------|---------------------------------|
-| `onOutsidePress` | function | `undefined`                     |
-| `disabled`       | boolean  | `undefined`                     |
-| All of [`ViewProps`](https://reactnative.dev/docs/view#props) |
+
+#### Props
+
+| Name             | Description                                          | Type                                                 | Default       | Required? |
+|------------------|------------------------------------------------------|------------------------------------------------------|---------------|-----------|
+| `onOutsidePress` | Function to run when pressed outside of component.   | function                                             |               | `true`    |
+| `disabled`       | Controls whether `onOutsidePress` should run or not. | boolean                                              | `false`       | `false`   |
+| `ViewProps`      | Inherits ViewProps.                                  | [ViewProps](https://reactnative.dev/docs/view#props) |               | `false`   |
 
 ## Changelogs
 See [CHANGELOGS.md](CHANGELOGS.md)
 
 ## License
-Copyright © 2022 David Angulo, released under the MIT license, see [LICENSE](LICENSE).
+Copyright © 2023 David Angulo, released under the MIT license, see [LICENSE](LICENSE).
