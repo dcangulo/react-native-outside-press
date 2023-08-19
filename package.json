@@ -1,6 +1,6 @@
 {
   "name": "react-native-outside-press",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "airbnb/react-outside-click-handler but for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
