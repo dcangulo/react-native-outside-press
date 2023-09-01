@@ -50,7 +50,7 @@
     "@evilmartians/lefthook": "^1.4.8",
     "@react-native-community/eslint-config": "^3.0.2",
     "@types/react": "~18.2.20",
-    "@types/react-native": "0.70.0",
+    "@types/react-native": "0.72.2",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
