@@ -46,12 +46,12 @@
   },
   "homepage": "https://github.com/dcangulo/react-native-outside-press#readme",
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/config-conventional": "^18.0.0",
     "@evilmartians/lefthook": "^1.4.8",
     "@react-native-community/eslint-config": "^3.0.2",
     "@types/react": "~18.2.20",
     "@types/react-native": "0.72.2",
-    "commitlint": "^17.0.2",
+    "commitlint": "^18.0.0",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^9.0.0",
@@ -60,7 +60,7 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.4",
-    "react-native-builder-bob": "^0.21.3",
+    "react-native-builder-bob": "^0.23.1",
     "typescript": "^5.0.2"
   },
   "resolutions": {
