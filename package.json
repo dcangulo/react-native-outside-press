@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/dcangulo/react-native-outside-press#readme",
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/config-conventional": "^18.0.0",
     "@evilmartians/lefthook": "^1.4.8",
     "@react-native-community/eslint-config": "^3.0.2",
     "@types/react": "~18.2.20",
