@@ -70,9 +70,6 @@
     "react": "*",
     "react-native": "*"
   },
-  "engines": {
-    "node": ">= 16.0.0"
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
