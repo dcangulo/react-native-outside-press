@@ -34,7 +34,7 @@ export default function Container(props: ViewProps) {
       </View>
     ),
     default: (
-      <View {...props} onTouchStart={runEvents}>
+      <View {...props} onTouchEnd={runEvents}>
         {props.children}
       </View>
     ),
